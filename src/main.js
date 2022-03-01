@@ -60,6 +60,6 @@ let step = ()=>{
         if(n <string.length){
             step();
         }
-    },10)
+    },50)
 }
 step();
