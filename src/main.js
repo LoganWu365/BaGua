@@ -40,6 +40,18 @@ let string = `/*你好，我是一个前端新人
     transform:translateX(-50%);
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 15%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 100%);
 }
+/* 最后，添加动画，让八卦动起来吧！*/
+@keyframes changeRight{       
+		 
+    0%{transform:rotate(0deg);}
+
+    50%{transform:rotate(180deg);}
+
+    100%{transform:rotate(360deg);}
+}
+#div1 {
+    animation:changeRight 6s linear infinite;
+}
 `;
 let n = 0;
 let string2 = '';
@@ -60,6 +72,6 @@ let step = ()=>{
         if(n <string.length){
             step();
         }
-    },50)
+    },0)
 }
 step();
